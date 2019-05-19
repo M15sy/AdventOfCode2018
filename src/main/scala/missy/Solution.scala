@@ -2,6 +2,7 @@ package missy
 
 trait Solution extends Part {
   val name: String
+
   def solve(): String
 }
 

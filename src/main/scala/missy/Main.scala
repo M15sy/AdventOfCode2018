@@ -1,7 +1,7 @@
 package missy
 
 object Main extends App {
-  allSolutions.foreach(solution => {
+  SolutionManager.allSolutions.foreach(solution => {
     solution match {
       case _: Part1 =>
         println()
