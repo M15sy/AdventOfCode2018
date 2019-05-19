@@ -1,4 +1,4 @@
-package missy
+package missy.adventofcode2018.solutions
 
 import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatest.{FlatSpecLike, Matchers}

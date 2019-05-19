@@ -1,4 +1,4 @@
-package missy
+package missy.adventofcode2018.solutions
 
 trait Solution extends Part {
   val name: String
@@ -6,7 +6,7 @@ trait Solution extends Part {
   def solve(): String
 }
 
-sealed trait Part {
+trait Part {
   val partName: String
 }
 

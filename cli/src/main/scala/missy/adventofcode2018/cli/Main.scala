@@ -1,4 +1,6 @@
-package missy
+package missy.adventofcode2018.cli
+
+import missy.adventofcode2018.solutions.{Part1, SolutionManager}
 
 object Main extends App {
   SolutionManager.allSolutions.foreach(solution => {

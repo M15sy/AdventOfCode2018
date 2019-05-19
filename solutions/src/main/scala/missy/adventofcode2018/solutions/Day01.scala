@@ -1,4 +1,4 @@
-package missy
+package missy.adventofcode2018.solutions
 
 import scala.collection.mutable.ListBuffer
 
@@ -9,12 +9,12 @@ private abstract class Day01 extends Solution {
   protected lazy val input: Seq[Int] = readFileLines(inputFileUrl).map(_.toInt)
 }
 
-private[missy] class Day01a extends Day01 with Part1 {
+private[solutions] class Day01a extends Day01 with Part1 {
   this: FileUrlProvider =>
   override def solve(): String = input.sum.toString
 }
 
-private[missy] class Day01b extends Day01 with Part2 {
+private[solutions] class Day01b extends Day01 with Part2 {
   this: FileUrlProvider =>
   override def solve(): String = {
     // TODO this is slow
