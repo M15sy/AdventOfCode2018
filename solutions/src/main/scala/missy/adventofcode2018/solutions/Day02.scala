@@ -11,7 +11,6 @@ private[solutions] class Day02a extends Day02 with Part1 {
   this: FileUrlProvider =>
   override def solve(): String = {
     input
-      .map(_.toCharArray)
       .map(_.groupBy(identity).mapValues(_.length))
       .flatMap(it => it.find(_._2 == 2) ++ it.find(_._2 == 3))
       .groupBy(_._2)
@@ -24,6 +23,14 @@ private[solutions] class Day02a extends Day02 with Part1 {
 private[solutions] class Day02b extends Day02 with Part2 {
   this: FileUrlProvider =>
   override def solve(): String = {
-    ""
+    var id: Option[String] = None
+    for (a <- input; b <- input) {
+      val zipA = a.zipWithIndex
+      val diff = zipA.diff(b.zipWithIndex)
+      if (diff.length == 1) {
+        id = Some(zipA.filterNot(diff.contains(_)).map(_._1).mkString)
+      }
+    }
+    id.get
   }
 }
